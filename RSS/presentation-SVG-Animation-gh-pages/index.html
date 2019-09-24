@@ -1,0 +1,877 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>SVG/Web Animation</title>
+
+		<meta name="description" content="SVG in Web Animation">
+		<meta name="author" content="Kudla Dzmitry">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			
+			
+			
+			
+<section>
+	<h1>SVG / Web animation</h1>
+		<p>
+		<small>Created by Kudla Dzmitry </small>
+	</p>
+<!-- 	
+Hi everyone! My name is Dima and i want to tell you about SVG in Web animation
+ -->
+
+</section>
+          
+<section>
+<h3>Web animation == cartoons == happiness</h3>
+<iframe src="img/mult2.jpg" width="800" height="556" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:3px solid #666; margin-bottom:5px; " >
+</iframe>
+					
+					
+<!-- 
+        1
+So I want to start by saying that I am happy. I am happy because i love web animation - it's like some sort of cartoons...something from my childhood...very nice. When I have practice with web animation i feel happy...you know... It is like I am the child again. And it is very awesome.
+  -->
+  
+</section>
+
+ <section>
+ <section>
+<h2>What is Web animation?</h2>
+						
+<!-- 
+        2
+Web animation adds motion to an interface...
+Animation is not just for cartoons anymore. From full-screen moving images to small hover effects, it is springing up everywhere. Animation is trendy, fun and user friendly.
+ -->
+ 
+</section>
+<section>
+ <ul>
+  <li>SVG</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+  <li>HTML</li>
+  <li>Canvas</li>
+  <li>WebG</li>
+ </ul>
+ 
+<!-- 
+		2.1
+				
+Web animation is an umbrella term for all these things  - web-first technologies that don’t require plugins:  CSS, JavaScript, HTML, Canvas, WebG, SVG 
+ -->
+ 
+</section>
+            
+ <section>
+<h3>Save as:</h3>
+  <ul>
+  <li>GIF</li>
+  <li>CSS</li>
+  <li>SVG</li>
+  <li>WebGL</li>
+  <li>video</li>
+ </ul>
+       
+ <!--   
+        2.2   
+Web animation is often saved as GIF, CSS, SVG, WebGL or video. They can be anything: simple underline or full-screen video or background image.
+ -->
+</section>               
+</section>
+            
+<section>        
+<section>
+<h2>What is SVG?</h2>
+<p>Scalable Vector Graphics</p>
+<br>
+<p>Special DOM element with unique Attributes, Tags, & Behaviors
+Can be used inline and manipulated via SMIL, CSS, & JavaScript <p>
+
+<!-- 
+        3
+One of the newer standards into web animation is SVG – scalable vector graphics which can be rendered, resized, and scaled naturally without any quality loss.
+ -->
+</section>  
+                             
+<section>
+    <h2>Raster Images (png)</h2>
+    <img width="32" height="32" data-src="img/cut_64.png">
+    <img width="64" height="64" data-src="img/cut_64.png">
+    <img width="128" height="128" data-src="img/cut_64.png">
+    <img width="356" height="356" data-src="img/cut_64.png">
+ <!--  
+         3.1
+This image has png format file , and when we scale it we can see pixels, our image breaks. It is very bad , we should avoid this situation.
+                                      
+ -->         
+ </section>      
+                        
+<section> 
+    <h2>Vector Images (svg)</h2>
+    <img width="32" height="32" data-src="img/cut_large.svg">
+    <img width="64" height="64" data-src="img/cut_large.svg">
+    <img width="128" height="128" data-src="img/cut_large.svg">
+    <img width="356" height="356" data-src="img/cut_large.svg"> 
+   <!--  
+         3.2
+Otherwise we have svg image and when we scale it is the same quality, distortion-free. It's very very cool.     
+ -->         
+</section>         
+</section>       
+         
+<section>
+<h2>Key Benefits SVG</h2>
+<ul>
+<li class="fragment">Smaller file sizes than rendered images</li>
+<li class="fragment">Scale to any resolution without distortion</li>
+<li class="fragment">SVG compresses incredibly well</li>
+<li class="fragment">Crisp on any display</li>
+</ul>  
+    		   
+<!--  
+         4
+So, what benefits else does svg have? 
+  -  Smaller file sizes than rendered images
+   - scale to any resolution without distortion - we have just  talked about it
+   -  SVG compresses very well - it is a very important if you work on a project where the size and loading time are critical.
+   - Crisp on any display    - especially it looks very well on retina display that will be an added nice bonus for apple lovers.   
+ -->       			
+				    
+  </section>     
+            
+<section>
+<section>
+<h2>Embedding SVG's</h2>
+</section>
+
+ <!--  
+         5
+ How can we embed svg in html? Exist several options.
+  -->				
+<section>
+<h2>img</h2>
+<pre><code><img src="thesvg.svg" alt=".." /></code></pre>
+ <!--  
+         5.1
+ Here we use tag img which has a link to svg file               
+ -->						
+</section>
+<section>
+<h2>background: url</h2>
+<pre><code>.class-name {background:url(thesvg.svg);}</code></pre>
+ <!--  
+         5.2
+using css property background, we insert in url the link to svg file                     
+ -->						
+</section>
+<section>
+    <h2>object</h2>
+    <pre><code><object type="image/svg+xml" data="thesvg.svg"></object></code></pre>
+ <!--  
+         5.3
+this case we use tag object, and here we insert a link to svg file    
+ -->						
+</section>
+
+<section>
+<h2>embed</h2>
+<pre><code><embed type="image/svg+xml" src="thesvg.svg" /></code></pre>
+ <!--  
+         5.4
+  Here we use tag embed . The same like object             
+ -->						
+</section>
+
+<section>
+<h2>iframe</h2>
+<pre><code><iframe src="thesvg.svg"></iframe></code></pre>
+ <!--  
+         5.5
+ Now we use tag iframe .             
+ -->						
+</section>
+
+<section>
+<h2>inline</h2>
+<pre><code><svg><!--svg data--></svg></code></pre>
+</section>
+ <!--  
+         5.6
+ finally we use tag svg, inside of which we insert svg data     
+ -->
+
+</section>        
+            
+<section>
+<h2>Exporting SVG's</h2>
+
+<div class="export">
+<img  src="img/sketch.png" height="100%" width="284" alt="">
+<h4>Sketch</h4>
+</div>
+<div class="export">			
+<img  src="img/illustrator.jpg" height="100%" width="245" alt="">
+<h4>Adobe Illustrator</h4>
+
+</div>
+<div class="export">
+<img  src="img/coral.png" height="100%" width="264" alt="">
+<h4>CorelDRAW</h4>
+
+</div>
+    
+  <!--  
+        6
+we can export svg code with help of many applications - first of all it is Sketch and Illustrator                 
+ -->     
+</section>     
+            
+<section> 
+ <h3>SVG Animation</h3>
+<p>Native => SMIL</p>
+<p>CSS</p>
+<p>JS</p> 
+                 
+ <!--  
+         7
+SVG is used not only for static images, but last eyars also widly used in animation. we can  make animation  in three ways: 
+1. With help of native SVG
+2. CSS
+3. Javascript.
+  the last two ways have their pros and cons but special attintion i want to pay on native SVG or SMIL   
+ 
+  
+                                          
+ -->
+ </section>
+            
+<section>      
+ <section> 
+  <h2>Why SMIL ?</h2>
+	<h4>Synchronized Multimedia Integration Language	
+           </h4>      
+ <!--  
+             8
+SMIL, Synchronized Multimedia Integration Language, is a markup language you can use to animate SVGs without CSS or JS. Because SVG is vector-based, with SMIL you can create more complex animations than what's possible with CSS and DOM elements. Works in all browsers except IE, Edge and Opera mini. 
+
+                      
+ -->
+            </section>
+<section> 
+<h2>PROS</h2>
+<ul>
+<li class="fragment">Provides an inline animation syntax</li>
+<li class="fragment">Can animate properties that CSS cannot</li>
+<li class="fragment">Decent control over animation triggering/chaining</li>
+<li class="fragment">Has better performance than CSS</li>
+</ul>  
+  <h2>CONS</h2>
+  <ul>
+<li class="fragment">A bit cumbrous to use</li>
+<li class="fragment">Poor IE support</li>
+    </ul>
+    <!--  
+         8.1
+         key pors : !!!and read it.         
+ -->
+   </section> 
+   
+                                                                                    
+</section>
+      
+ <section>
+  <section> 
+<h2> The main elements</h2>
+ <ul>
+<li>animate</li>
+<li>animateMotion</li>
+<li>animateTransform</li>
+</ul>         
+ <!--  
+         9
+The main elements responsible for animation are
+     animate
+     animateMotion
+     animateTransform.
+Will look at each separately               
+ -->
+</section>
+            
+<section>
+<h3>Animate</h3>
+<p>Tag Animate allows you to animate attributes and properties over a period of time.  </p>
+
+
+<p> from="60"  to="430"
+    begin="0s" dur="5s"</p>
+
+<!--
+ <pre>
+ <code>
+<circle cx="30" cy="30" r="25" style="stroke: none; fill: #ff0000;">
+  <animate attributeName="cx" attributeType="XML"
+    from="30"  to="470"
+    begin="0s" dur="5s"
+    fill="remove" repeatCount="indefinite" />
+</circle>       
+  </code>
+    </pre>
+-->
+       
+       <p>
+        <svg width="500" height="100">
+         <circle cx="30" cy="50" r="50" style="stroke: none; fill: #ff0000;">
+          <animate attributeName="cx" attributeType="XML"
+                             from="60"  to="430"
+                             begin="0s" dur="5s"
+                             fill="remove" repeatCount="indefinite" />
+              </circle>
+              </svg>
+            </p>
+  <a href="https://codepen.io/Linus222/pen/gmveWb"> Codepen</a>          
+            
+  <!-- 
+         9.1  
+Tag Animate allows you to animate  attributes and properties over a period of time.  
+Inside the element Animate are attributes from, to, begin etc. to set animation parameters. In our case we see the red ball which moves from left to right.
+ -->     
+ 
+</section>      
+            
+<section>
+<h3>animateMotion</h3>
+<p>Animates motion along a path you have set.</p>
+<p>  path="M10,50 q60,50 100,0 q60,-50 100,0"</p>
+    
+    
+<!--
+ <pre>
+ <code>
+<circle cx="0" cy="0" r="15" style="stroke: none; fill: #ff0000;">
+<animateMotion
+  path="M10,50 q60,50 100,0 q60,-50 100,0"
+  begin="0s" dur="10s" repeatCount="indefinite"
+  rotate="auto"
+  />
+</circle>
+<path d="M10,50 q60,50 100,0 q60,-50 100,0" style="stroke: #ff0000; fill: none;"></path>  
+ </code>
+  </pre>
+-->
+ 
+ 
+  <p>
+    <svg width="500" height="200">
+        <path d="M10,50 q60,50 100,0 q60,-50 100,0" style="stroke: #ff0000; fill: none;"></path>
+        <rect x="0" y="0" width="70" height="70"  style="stroke: #ffffff; fill: #ff0000;">
+         <animateMotion
+                      path="M10,50 q60,50 100,0 q60,-50 100,0"
+                      begin="0s" dur="10s" repeatCount="indefinite"
+                      rotate="auto"
+                      />
+      </rect>
+       </svg>
+    </p>
+           
+<a href="http://codepen.io/Linus222/pen/EWQEwe">Codepen</a> 
+            
+ <!-- 
+            9.2
+
+     -->            
+   </section>         
+            
+<section>
+<h3>animateTransform</h3>
+<p>Animates the transform attribute of a shape. The figure moves relative to the coordinates that we asked</p>
+<p>from="0 250 150" to="360 250 150"</p>
+<!--
+<pre>
+ <code>
+<rect x="0" y="0" rx="20" ry="20" width="150" height="120" style="fill: #ff0000; stroke: #000000; stroke-width: 5; opacity: 0.5" transform="rotate(155.739 250 150)">
+  <animateTransform attributeName="transform" 
+    type="rotate" 
+    from="0 250 150" 
+    to="360 250 150" 
+    begin="0s" 
+    dur="10s" 
+    repeatCount="indefinite"
+    />
+</rect>
+<circle cx="250" cy="150" r="2" style="stroke: none; fill: #ff0000;"></circle>
+              </code>
+            </pre>
+-->
+            
+            
+            
+            <p>
+              <svg width="500" height="300">
+                <rect x="0" y="0" rx="20" ry="20" width="150" height="150" style="fill: #ff0000; stroke: #000000; stroke-width: 5; opacity: 0.5" transform="rotate(155.739 250 150)">
+              <animateTransform attributeName="transform" type="rotate" from="0 250 150" to="360 250 150" begin="0s" dur="10s" repeatCount="indefinite" />
+           </rect>
+           <circle cx="250" cy="150" r="2" style="stroke: none; fill: #ff0000;"></circle>
+     </svg>
+  </p>
+    
+<a href="http://codepen.io/Linus222/pen/aJqYgx">Codepen</a>     
+    
+<!-- 
+            9.3
+
+ -->                                       
+</section>     
+ </section>              
+                        
+                                          
+<section>
+ <section>
+ <h3>Interactivity animation</h3>
+   <p>begin="mouseover"</p>
+   <p>dur="3s" repeatCount="1"</p>
+      
+      
+<!--
+       <pre>
+        <code>
+<circle cx="0" cy="0" r="15" style="stroke: none; fill: #ff0000;">
+<animateMotion
+  path="M10,50 q60,50 100,0 q60,-50 100,0"
+  begin="mouseover" dur="3s" repeatCount="1"
+  rotate="auto"
+  />
+</circle>
+<path d="M10,50 q60,50 100,0 q60,-50 100,0" style="stroke: #ff0000; fill: none;"></path>  
+          </code>
+        </pre>
+-->
+        
+        
+        <p>
+             <svg width="500" height="200">
+                <path d="M10,50 q60,50 100,0 q60,-50 100,0" style="stroke: #ff0000; fill: none;"></path>
+         <circle cx="0" cy="0" r="15" style="stroke: #ffffff; fill: #ff0000;">
+<animateMotion
+                    path="M10,50 q60,50 100,0 q60,-50 100,0"
+                      begin="mouseover" dur="3s" repeatCount="1"
+                      rotate="auto"
+                      />
+           </circle>
+      </svg>
+    </p>
+                  
+ <a href="http://codepen.io/Linus222/pen/xqYNXd">Codepen</a>  
+                   
+<!-- 
+            10
+Now we go to the interactive animation. It is a very usefull feature because it is often necessary to start the animation just after the interaction with user.
+ In charge of this is an attribute begin.
+ When begin equals mouseover, the animation starts when the user moves the mouse on the figure.
+             -->   
+          </section>
+          
+<section>
+    <h3>Interactivity animation</h3>
+            <p>begin="click"</p>
+            <p>dur="3s" repeatCount="1"</p>
+            
+            
+<!--
+            <pre>
+              <code>
+<circle cx="0" cy="0" r="15" style="stroke: none; fill: #ff0000;">
+<animateMotion
+  path="M10,50 q60,50 100,0 q60,-50 100,0"
+  begin="click" dur="3s" repeatCount="1"
+  rotate="auto"
+  />
+</circle>
+<path d="M10,50 q60,50 100,0 q60,-50 100,0" style="stroke: #ff0000; fill: none;"></path>  
+              </code>
+            </pre>
+-->
+           
+            <p>
+              <svg width="500" height="200">
+                <path d="M20,510 q60,50 100,0 q60,-50 100,0" style="stroke: #ff0000; fill: none;"></path>
+                <circle cx="0" cy="0" r="15" style="stroke: #ffffff; fill: #ff0000;">
+                  <animateMotion
+                      path="M10,50 q60,50 100,0 q60,-50 100,0"
+                      begin="click" dur="3s" repeatCount="1"
+                      rotate="auto"
+                      />
+                </circle>
+              </svg>
+            </p>
+            
+    <a href="http://codepen.io/Linus222/pen/qrxGVP">Codepen</a>  
+    
+<!-- 
+            10.1
+ When begin equals click,  the animation starts when the user makes a click on the figure.
+  -->   
+          </section>
+          
+          <section>
+            <h3>Combine animations</h3>
+            <p>Synchronize the beginning of one animation to the end of another</p>
+            
+<!--
+            <pre>
+              <code>
+<rect x="0" y="0" width="100" height="100"
+  style="stroke: #ff0000; stroke-width: 2; fill: #000000; opacity: 0.7">
+  <animate id="first"
+   attributeName="x" attributeType="XML"
+   from="0" to="396"
+   begin="click" dur="2s" fill="freeze"
+  />
+  <animate
+    attributeName="y" attributeType="XML"
+    from="0" to="50"
+    begin="first.end" dur="1s" fill="freeze"
+    />
+</rect>
+              </code>
+            </pre>
+-->
+            
+            <p>
+              <svg width="500" height="200">
+                <rect x="0" y="0" width="100" height="100"
+                  style="stroke: #ff0000; stroke-width: 2; fill: #000000; opacity: 0.7">
+                  <animate id="first"
+                   attributeName="x" attributeType="XML"
+                   from="0" to="396"
+                   begin="click" dur="2s" fill="freeze"
+                  />
+                  <animate
+                    attributeName="y" attributeType="XML"
+                    from="0" to="50"
+                    begin="first.end" dur="1s" fill="freeze"
+                    />
+                </rect>
+              </svg>
+            </p>
+            
+    <a href="http://codepen.io/Linus222/pen/PpQvOX">Codepen</a>
+            
+  <!-- 
+            10.2
+Also we can combine theese types of animation. For example when one ends - other begins. Our case the square first moves to the right and then moves down. 
+ -->            
+</section>
+
+<section>
+            <h3>Additive animations</h3>
+            <p>Cumulate two animations with the same name.  Additive="sum"</p>
+           
+<!--
+            <pre>
+              <code>
+<svg width="800" height="500">
+  <polygon fill="#FFFFFF" stroke="#FFF800" stroke-width="3" points="383,138 353,227 428,172 338,172 413,227 ">
+  <animateTransform attributeName="transform" attributeType="XML"
+      type="scale"
+      from="1" to="1.5"
+      begin="0s" dur="5s"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  <animateTransform attributeName="transform" attributeType="XML"
+      type="rotate"
+      from="0 380 385" to="360 380 185"
+      begin="0s" dur="3s"
+      fill="freeze"
+      repeatCount="indefinite"
+      additive="sum"
+    />
+  </polygon>
+</svg>
+              </code>
+            </pre>
+-->
+           
+            <p style="margin-top: -100px;" >
+              <svg width="800" height="300">
+                <polygon fill="#FFFFFF" stroke="#4a4935" stroke-width="3" points="383,138 353,227 428,172 338,172 413,227 ">
+                <animateTransform attributeName="transform" attributeType="XML"
+                    type="scale"
+                    from="0" to="1.5"
+                    begin="0s" dur="4s"
+                    repeatCount="indefinite"
+                    additive="sum"
+                  />
+                <animateTransform attributeName="transform" attributeType="XML"
+                    type="rotate"
+                    from="0 380 185" to="360 380 185"
+                    begin="0s" dur="5s"
+                    fill="freeze"
+                    repeatCount="indefinite"
+                    additive="sum"
+                  />
+                </polygon>
+              </svg>
+             
+            </p>
+           <a href="http://codepen.io/Linus222/pen/ZerNrW">Codepen</a>  
+     
+     
+<!-- 
+            10.3
+            
+
+ -->  
+ </section>
+                   
+<section>
+            <h3>Repeat animations</h3>
+            <p>repeatCount="3", repeatDur="5s"</p>
+<!--
+            <pre>
+              <code>
+<svg width="900" height="00">
+  <path d="M1,255 C188,100 289,98 494,254" />
+  <polygon points="50,5 20,94 95,39 5,39 80,94"
+    style="fill:#FFFFFF;stroke:yellow;stroke-width:3;fill-rule:nonzero;">
+  <animateMotion id="forward"
+    path="M1,255 C188,100 289,98 494,254"
+    begin="click" dur="1s" repeatCount="3" repeatDur="5s"
+    fill="remove"
+    rotate="auto"
+    />
+  <animateTransform attributeName="transform"
+    type="scale"
+    from="1" 
+    to="2"
+    begin="forward.end" 
+    dur="2s"
+    fill="freeze"
+    repeatCount="3"
+    repeatDur="5s"
+    />
+    </polygon>
+</svg>
+              </code>
+            </pre>
+-->
+            
+            
+            <p style="margin-top: -50px;" >
+              <svg width="800" height="300">
+                <path d="M1,255 C188,100 289,98 494,254" />
+                <polygon points="50,5 20,94 95,39 5,39 80,94"
+                  style="fill:#FFFFFF;stroke:#4a4935;stroke-width:3;fill-rule:nonzero;">
+                <animateMotion id="forward"
+                  path="M1,255 C188,100 289,98 494,254"
+                  begin="click" dur="1s" repeatCount="indefinite" repeatDur="5s"
+                  fill="remove"
+                  rotate="auto"
+                  />
+                <animateTransform attributeName="transform"
+                  type="scale"
+                  from="1" 
+                  to="2"
+                  begin="forward.end" 
+                  dur="2s"
+                  fill="freeze"
+                  repeatCount="3"
+                  repeatDur="5.s"
+                  />
+                  </polygon>
+              </svg>
+            </p>
+            
+    <a href="http://codepen.io/Linus222/pen/zZRQaZ">Codepen</a> 
+<!-- 
+            10.4
+            
+we can repeat animation with help of attributes repeatCount and repeatDur. In our example repeatCount equals 3 times and repeatDur 5 seconds.
+ -->              
+          </section>  
+ </section>         
+            
+<section>
+ <div style="float: left">
+<h2>Css</h2>
+<p>Great support</p>
+</div>
+<div style="float: left; padding-left: 230px;">
+<h2>JS</h2>
+   <p>JS Libraries</p>
+<ul>
+  <li>Snap.svg</li>
+  <li>Velocity.js</li>
+  <li>Svg.js</li>
+   <li>Raphael.js</li>
+   </ul>
+ </div>
+    <!-- 
+            11
+existe Other ways to animate SVG: css and js. CSS provides great support for SVG tags and attributes to animate. And JS  provides great support also and many resources for SVG animation like js Libraries. The most important are
+     Snap.svg
+       Velocity.js
+       Svg.js
+       Raphael.js  
+             -->
+</section>    
+              
+<section> 
+    
+ <section> 
+ <h2>Examples</h2>       
+ <!--  
+         12
+Thanks to SVG animation we can see really awesome things such as            
+ -->
+  </section>
+                 
+<section>
+<h3>Smil</h3>
+ <p data-height="550" data-theme-id="0" data-slug-hash="WbXeOB" data-default-tab="result" data-user="tmrDevelops" data-embed-version="2" data-pen-title="SVG: Motion" class="codepen">See the Pen <a href="http://codepen.io/tmrDevelops/pen/WbXeOB/">SVG: Motion</a> by Tiffany Rayside (<a href="http://codepen.io/tmrDevelops">@tmrDevelops</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>            
+<!--  
+         12.1           
+ -->    
+</section>            
+                   
+ <section>
+ <h3>Smil</h3>
+<p data-height="550" data-theme-id="0" data-slug-hash="GgMREp" data-default-tab="result" data-user="tmrDevelops" data-embed-version="2" data-pen-title="SVG: Kaleidoscope Effect" class="codepen">See the Pen <a href="http://codepen.io/tmrDevelops/pen/GgMREp/">SVG: Kaleidoscope Effect</a> by Tiffany Rayside (<a href="http://codepen.io/tmrDevelops">@tmrDevelops</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<!--  
+         12.2               
+ -->                   
+</section>            
+            
+  <section>
+  <h3>Smil</h3>
+<p data-height="550" data-theme-id="0" data-slug-hash="JbrfI" data-default-tab="result" data-user="CyrilLevallois" data-embed-version="2" data-pen-title="SVG Animation - Running (with light saber)" class="codepen">See the Pen <a href="http://codepen.io/CyrilLevallois/pen/JbrfI/">SVG Animation - Running (with light saber)</a> by Cyril Levallois (<a href="http://codepen.io/CyrilLevallois">@CyrilLevallois</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+ 
+<!--  
+         12.3                
+ -->                   
+</section>            
+                              
+<section>
+<h3>Smil</h3>
+<p data-height="550"  data-theme-id="0" data-slug-hash="zfDGC" data-default-tab="result" data-user="guttentag" data-embed-version="2" data-pen-title="Autumn in Cupertino" class="codepen">See the Pen <a href="http://codepen.io/guttentag/pen/zfDGC/">Autumn in Cupertino</a> by Adam Guttentag (<a href="http://codepen.io/guttentag">@guttentag</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<!--  
+         12.4                
+ -->                                    
+</section>            
+          
+      <section> 
+<h3>SVG with CSS</h3>                                     
+<p data-height="550" data-theme-id="0" data-slug-hash="tqazd" data-default-tab="result" data-user="jhoward" data-embed-version="2" data-pen-title="150 Animated SVG Icons" class="codepen">See the Pen <a href="http://codepen.io/jhoward/pen/tqazd/">150 Animated SVG Icons</a> by Joe Howard (<a href="http://codepen.io/jhoward">@jhoward</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>                  
+
+ <!--  
+         12.5             
+ -->                                                                   </section>   
+                                              
+   <section>
+<h3>SVG with JS</h3>
+ <p data-height="600" data-theme-id="0" data-slug-hash="BNByzJ" data-default-tab="result" data-user="thiennhat" data-embed-version="2" data-pen-title="SVG animation" class="codepen">See the Pen <a href="http://codepen.io/thiennhat/pen/BNByzJ/">SVG animation</a> by Hoàng Nhật (<a href="http://codepen.io/thiennhat">@thiennhat</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+      
+<!--  
+         12.6               
+ -->    
+</section>                                                                  </section>
+                 
+ <section> 
+<h3>Links to explore</h3>
+ <ul>
+    <li>
+    <a href="https://github.com/willianjusten/awesome-svg/blob/master/topics/Animation.md "> Github</a>
+    </li>
+    <li>
+     <a href="https://davidwalsh.name/svg-animation "> David Walsh - SVG Animation</a>
+    </li>
+    <li>
+    <a href="https://www.smashingmagazine.com/2014/11/styling-and-animating-svgs-with-css/?utm_source=CSS-Weekly&utm_campaign=Issue-135&utm_medium=email"> SmashMagazine - Styling & Animating SVGs</a>
+    </li>
+    <li>
+<a href="https://alistapart.com/article/web-animation-at-work "> Rachel Nabors  - Web Animation at Work</a>
+    </li>
+ </ul>
+ <!--  
+          13
+   If you wanna to learn SVG animation more, you can use theese links:
+1. I want to gocus on Github - as usual it has many more information. Here you can find almost everything about SVG
+        
+           
+                 
+Finally         
+if you want your message, product or services to spread in 2017, you will need to create a website that tells your story in a more visual and interactive way.
+Learn SVG, CSS and JavaScript animations, be creative, be brave and you will be fine and happy like me.         
+ -->
+ </section>
+           
+<section> 
+<h2>The end</h2>
+     
+ <!--  
+             14                
+ -->
+     </section>
+            
+</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

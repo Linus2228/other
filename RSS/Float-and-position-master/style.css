@@ -1,0 +1,175 @@
+body { 
+    height: 2000px;
+    margin: 0px;
+    padding: 0px;
+    color: #333;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 11px;
+    line-height: 16px;
+}
+
+.clearfix:after {
+	content: '';
+	clear: both;
+	display: table;
+}
+
+.wrapper {
+    width: 605px;
+    position: relative;
+    margin: 200px auto 50px;
+}
+
+.page__bookmark {
+    width: 108px;
+    height: 35px;
+    border: 2px solid black;
+    border-radius: 0px 10px 10px 0px;
+    position: absolute;
+}
+
+.page__bookmark-down {
+    background-color: #00aeef;
+    right: -19px;
+    top: 46px;
+}
+
+.page__bookmark-middle { 
+    background-color: #39b54a;
+    right: -51px;
+    top: 36px;
+}
+
+.page__bookmark-top {
+    background-color: #f68e56;
+    top: 36px;
+    right: -84px;
+}
+
+.page {
+    width: 519px; 
+    border: 2px solid black;
+    position: absolute;
+}
+
+.page-down {
+    background-color: #acacac;
+    height: 100%;
+    left: 40px;
+    top: 37px;
+}
+
+.page-middle {
+    background-color: #ccc;
+    left: 20px;
+    height: 100%;
+    top: 20px;
+}
+
+.page-top {
+    background-color: #ebebeb;
+    position: relative;
+}
+
+.common {
+     padding: 28px 33px 0 33px; 
+}
+
+ .page-top__content-text h1{
+    margin: 13px 0px 15px 0px;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.img-cup {
+    float: left;
+    margin-right: 20px;
+    padding-top: 2px;
+}
+
+.img-paper {
+    float: right;
+    padding-top: 7px;
+}
+
+.page-top__content-blocks  h2 {
+    margin: 12px 0px 20px -2px;
+}
+.block {  
+    width: 194px;
+    height: 89px;
+}
+
+.block-top-l {
+    float: left;
+}
+
+.block-top-r {
+    float: right;
+}
+
+.blocks-down {
+    padding-top: 14px;
+}
+
+.block-down-l {
+    float: left;
+}
+
+.block-down-r {
+    float: right;
+}
+
+.text-3 {
+    font-size: 9px;
+    text-align: center;
+    padding: 10px 0 35px 0;  
+}
+
+.box-social {
+    width: 87px;
+    height: 69px;
+    border: 1px solid black;
+    position: fixed;
+    bottom: 10px;
+    right: 0px;   
+    background: #fbaf5d;
+    text-align: center;
+}
+
+.box-social-text p{
+    font-size: 15px;
+    padding-left: 5px;
+}
+
+.box-social-links {
+    margin-top: -7px;
+}
+
+.box-social-links a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    float: left;
+    margin-right: 8px;
+}
+
+.fa {
+    position: relative;
+    top: 2px;
+    color: white;
+}
+
+.footer-soc-icon-1 {
+    margin-left: 3px;
+    background: #4e71a8; 
+}
+
+.footer-soc-icon-2 {
+    background: #1cb7eb; 
+}
+
+.footer-soc-icon-3 {
+    background: #000; 
+}

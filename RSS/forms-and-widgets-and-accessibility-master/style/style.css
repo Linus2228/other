@@ -1,0 +1,893 @@
+/* FONTS */
+
+@font-face {
+    font-family: GothamBook;
+    src: url(../fonts/gotham/GothamSSm-Book.woff);
+}
+
+@font-face {
+    font-family: GothamMedium;
+    src: url(../fonts/gotham/GothamSSm-Medium.woff);
+}
+
+@font-face {
+    font-family: GothamLight;
+    src: url(../fonts/gotham/GothamSSm-Light.woff);
+}
+
+/* MAIN */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+    padding: 50px;
+    background-color: #d9d9d9;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.widget {
+    margin-bottom: 50px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px #919191;
+}
+
+.common-button {
+    font: 15px GothamBook, sans-serif;
+    background-color: #fb6362;
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    border-radius: 3px;
+    box-shadow: 0 1px 4px #999999;
+    border-bottom: 1px solid #755757;
+    cursor: pointer;
+}
+
+.common-button:hover {
+background-color: #d13c3b;
+}
+
+/* CALENDAR */
+
+.calendar {
+    font-family: GothamBook, sans-serif;
+    width: 346px;
+    min-height: 427px;
+}
+
+.calendar-header {
+    position: relative;
+    height: 62px;
+    border-radius: 3px 3px 0 0;
+    background-color: #404a58;
+    margin-bottom: 12px;
+}
+
+.hide {
+    display: none;
+}
+
+.calendar-header h4 {
+    color: white;
+    text-align: center;
+    padding: 21px 1px 20px 0;
+}
+
+.calendar-header h4 span {
+    font-size: 17px;
+    font-family: GothamLight, sans-serif;
+}
+
+.arrow-prev {
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    background: url(../img/sprites.png) no-repeat;
+	top: 22px;
+    left: 34px;
+}
+
+.arrow-next {
+    width: 15px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    background: url(../img/sprites.png) no-repeat 0 -18px;
+    top: 21px;
+    left: 295px;
+}
+
+.arrow-prev:hover {
+    background: url(../img/sprites.png) -35px 0;
+}
+
+.arrow-next:hover {
+    background: url(../img/sprites.png) -36px -18px;
+}
+
+.calendar-main {
+    margin: 0 auto 22px auto;
+    text-align: center;
+}
+
+.calendar-main thead {
+    font: 14px GothamMedium, sans-serif;
+    color: #666;
+}
+
+.calendar-main thead th {
+    width: 37px;
+    height: 38px;
+}
+
+.calendar-main tbody {
+    font: 14px GothamBook, sans-serif;
+    color: #666;
+}
+
+.calendar-main tbody td {
+    width: 39px;
+    height: 39px;
+}
+
+.calendar-main tbody td:hover {
+    background-color: #3de644;
+    border-radius: 50%;
+    cursor: pointer;
+    color: white;
+}
+
+.current-date {
+    background-color: #fb6362;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
+}
+
+.off {
+    color: #c5c5c5;
+}
+
+.holiday {
+    color: #fb6362;
+    font-weight: bold;
+}
+
+.calendar-new-event {
+    width: 299px;
+    height: 58px;
+    margin: 0 auto;
+}
+
+.calendar-add-event {
+    width: 299px;
+    height: 58px;
+}
+
+/* BOOKING */
+
+.booking {
+	width: 346px;
+}
+
+.booking-picture {
+	position: relative;
+    margin-bottom: -4px;
+}
+
+.booking-form {
+	background: #fdfdfd;
+	padding: 25px 24px;
+}
+
+.hotel-name {
+	position: absolute;
+    bottom: 20px;
+    left: 22px;
+    letter-spacing: 0.1em;
+}
+
+.hotel-name h3 {
+	font-family: GothamBook, sans-serif;
+	font-size: 25px;
+	font-weight: 300;
+	color: white;
+}
+
+.location {
+    letter-spacing: 0px;
+}
+
+.location:before {
+    content: "";
+    background: url(../img/sprites.png) no-repeat -58px -2px;
+	width: 15px;
+	height: 20px;
+	padding-right: 2px;
+	margin-bottom: -2px;
+	display: inline-block;
+}
+
+.hotel-name span {
+	font-family: GothamLight, sans-serif;
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+	display: inline-block;
+}
+
+.input-container {
+	position: relative;
+	margin: 9px 0 19px;
+}
+
+.click-backgroundg {
+	width: 37px;
+    height: 37px;
+    border: none;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 4px;
+    margin: auto;
+    cursor: pointer;
+    background: url(../img/sprites.png) no-repeat -51px -25px;
+    background-color: #414b59;
+}
+
+.click-backgroundg:hover {
+	background: url(../img/sprites.png) no-repeat -87px -25px;
+    background-color: #414b59;
+}
+
+.checkbox {
+    margin-bottom: 14px;
+    position: relative;
+}
+
+.booking select {
+    width: 158px;
+    height: 45px;
+    border: none;
+    font: 14px GothamLight, sans-serif;
+    font-weight: bold;
+    color: #414b59;
+    padding-left: 10px;
+    cursor: pointer;
+    line-height: 22px;
+    position: relative;
+    background: none;
+    z-index: 100;
+}
+
+.select-outer {
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    background: #f4f4f4;
+    width: 138px;
+    overflow: hidden;
+    display: inline-block;
+    position: relative;
+}
+
+.select-outer1 {
+    margin-right: 18px;
+}
+
+.select-button {
+    background: url(../img/sprites.png) no-repeat;
+    background-position: -196px 5px;
+    height: 37px;
+    width: 37px;
+    border-radius: 3px;
+    background-color: #414b59;
+    position: absolute;
+    right: 4px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.select-description {
+    font: bold 14px GothamBook, sans-serif;
+    color: #666;
+    display: inline-block;
+    width: 45%;
+    margin: 0 12px 10px 0;
+}
+
+.select-description2 {
+    width: 40%;
+    padding-left: 10px;
+}
+
+.select-wrapper {
+    margin-bottom: 35px;
+}
+
+.booking-button {
+    width: 299px;
+    height: 58px;
+    position: relative;
+    background-color: #fb6362;
+    text-align: center;
+    background-position: -18px -2088px;
+}
+
+input[type="text"] {
+	padding: 15px 45px 15px 15px;
+	border: none;
+	box-shadow: inset 0 1px 0 0.1px rgba(0,0,0,0.25);
+	border-radius: 2px;
+	background-color: #f4f4f4;
+	color: #999898;
+	width: 296px;
+	box-sizing: border-box;
+	font-family: GothamLight, sans-serif;
+	font-size: 14px;
+}
+
+label {
+	font-family: GothamBook, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666666;
+	display: block;
+}
+
+#booking-checkbox {
+    width: 22px;
+    height: 23px;
+    background-color: #f4f4f4;
+}
+
+label[for="booking-checkbox"] {
+    font: 14px GothamBook, sans-serif;
+    color: #666;
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    left: 32px;
+    bottom: 8px;
+}
+
+.booking input[type=checkbox]:checked + label[for="booking-checkbox"]:before {
+    content: "";
+    width: 23px;
+    height: 22px;
+    background: url(../img/sprites.png) no-repeat -132px -31px;
+    background-color: #f4f4f4;
+}
+
+.search-book-button {
+    width: 299px;
+    height: 58px;
+    background: url(../img/sprites.png) no-repeat 51px -461px;
+    background-color: #fb6362;
+    padding-left: 21px;
+}
+
+/* ARTICLE FORM */
+
+.article {
+    width: 792px;
+    height: 340px;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+.article-tabs {
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+
+.article-tabs li {
+    width: 72px;
+    height: 113px;
+    list-style: none;
+    background-color: #404a58;
+    border-bottom: 1px solid #242931;
+}
+
+.article-tabs li:nth-child(1) {
+    background: url(../img/sprites.png) no-repeat 17px -185px;
+    background-color: #fb6362;
+}
+
+.article-tabs li:nth-child(2) {
+    background: url(../img/sprites.png) no-repeat -130px -196px;
+    background-color: #404a58;
+}
+
+.article-tabs li:nth-child(3) {
+    background: url(../img/sprites.png) no-repeat -273px -205px;
+    background-color: #404a58;
+}
+
+.article-tabs li:hover {
+    background-color: #fb6362;
+}
+
+.article-tabs a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.article-description {
+    float: left;
+    width: 358px;
+    height: 339px;
+    padding: 0 0 0 35px;
+    box-sizing: border-box;
+}
+
+.article-description h3 {
+    font: 21px GothamMedium, sans-serif;
+    width: 220px;
+    line-height: 1.46;
+    color: #4d4d4d;
+    margin: 27px 0 9px 0;
+    letter-spacing: -0.7px;
+}
+
+.reviews {
+    font: bold 14px GothamLight, sans-serif;
+    color: #999;
+    margin-bottom: 29px;
+    display: inline-block;
+}
+
+.reviews-sum {
+    color: #4d4d4d;
+    margin-right: 6px;
+}
+
+.reviews + p {
+    font: 14px GothamLight, sans-serif;
+    color: #999;
+    margin-bottom: 15px;
+    line-height: 1.77;
+    width: 290px;
+    letter-spacing: -0.17px;
+}
+
+.reviews + p + a {
+    font: 14px GothamBook, sans-serif;
+    color: #fb6362;
+    text-decoration: none;
+}
+
+.reviews + p + a:hover {
+    color: #d13c3b;
+}
+
+.article figure {
+    width: 362px;
+    height: 340px;
+    float: left;
+    margin: 0;
+}
+
+.comments,
+.likes {
+    font: 17px GothamBook, sans-serif;
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    width: 82px;
+    height: 26px;
+    padding: 2px 0 0 34px;
+    box-sizing: border-box;
+}
+
+.comments {
+    background: url(../img/sprites.png) no-repeat -90px -168px;
+}
+
+.comments:hover {
+    background: url(../img/sprites.png) no-repeat -190px -169px;
+}
+
+.likes {
+    background: url(../img/sprites.png) no-repeat -93px -99px;
+}
+
+.likes:hover {
+    background: url(../img/sprites.png) no-repeat -193px -100px;
+}
+
+.article figcaption {
+    margin: -49px 0 0 168px;
+}
+
+.article figure {
+    position: relative;
+}
+
+.article figure::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 36px;
+    left: 0px;
+    border: 22px solid;
+    border-color: transparent transparent transparent #fff;
+}
+
+
+/* GRAPH */
+
+.graph {
+    width: 792px;
+    height: 340px;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.graph ul {
+    color: #666;
+    list-style: none;
+    padding-left: 40px;
+    font: 12px GothamMedium, sans-serif;
+}
+
+.value-list {
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
+
+.value-list li {
+    margin-bottom: 55px;
+    position: relative;
+}
+
+.value-list li::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    display: block;
+    width: 704px;
+    height: 1px;
+    background-color: #eaeaea;
+}
+
+.week-list {
+    position: absolute;
+    bottom: 39px;
+    left: 77px;
+}
+
+.week-list li {
+    display: inline-block;
+}
+
+.week-list li:nth-child(1) {
+    margin-right: 60px;
+}
+
+.week-list li:nth-child(2) {
+    margin-right: 58px;
+}
+
+.week-list li:nth-child(3) {
+    margin-right: 58px;
+}
+
+.week-list li:nth-child(4) {
+    margin-right: 66px;
+}
+
+.week-list li:nth-child(5) {
+    margin-right: 68px;
+}
+
+.week-list li:nth-child(6) {
+    margin-right: 63px;
+}
+
+.bar-list {
+    position: absolute;
+    bottom: 59px;
+    left: 65px;
+}
+
+.bar-list li {
+    display: inline-block;
+    margin-right: 31px;
+}
+
+@-webkit-keyframes mon {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 49px;
+    }
+}
+
+@-webkit-keyframes tues {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 62px;
+    }
+}
+
+@-webkit-keyframes wed {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 119px;
+    }
+}
+
+@-webkit-keyframes thu {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 158px;
+    }
+}
+
+@-webkit-keyframes fri {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 129px;
+    }
+}
+
+@-webkit-keyframes sat {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 169px;
+    }
+}
+
+@-webkit-keyframes sun {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 143px;
+    }
+}
+
+.anim-mon {
+    animation: mon 2s;
+}
+
+.anim-tues {
+    animation: tues 2s;
+}
+
+.anim-wed {
+    animation: wed 2s;
+}
+
+.anim-thu {
+    animation: thu 2s;
+}
+
+.anim-fri {
+    animation: fri 2s;
+}
+
+.anim-sat {
+    animation: sat 2s;
+}
+
+.anim-sun {
+    animation: sun 2s;
+}
+
+.bar-unit {
+    width: 55px;
+    background-color: #fb6362;
+    border-radius: 2px;
+    cursor: pointer;
+    position: relative;
+}
+
+.bar-unit:hover .value-window {
+    visibility: visible;
+}
+
+.value-window {
+    width: 55px;
+    height: 30px;
+    background-color: #404a58;
+    border-radius: 2px;
+    position: absolute;
+    top: -45px;
+    left: 0;
+    text-align: center;
+    visibility: hidden;
+}
+
+.value-window span {
+    font: 12px GothamMedium, sans-serif;
+    color: #fff;
+    display: inline-block;
+    margin-top: 7px;
+}
+
+.value-window::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 7px solid;
+    border-color: #404a58 transparent transparent transparent;
+    position: absolute;
+    bottom: -14px;
+    left: 21px;
+}
+
+/* EMAIL */
+
+.email {
+    width: 380px;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.email ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.email form {
+    width: 328px;
+}
+
+.email input,
+.email textarea {
+    width: 100%;
+}
+
+.email input[type="email"] {
+    margin-bottom: 26px;
+}
+
+.email input[type="file"] {
+    margin-bottom: 24px;
+}
+
+.email textarea {
+    resize: none;
+    margin-bottom: 19px;
+    min-height: 223px;
+    font: 14px GothamLight, sans-serif;
+    color: #999898;
+    background-color: #f4f4f4;
+    padding: 13px 60px 13px 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.email-btn-wrapper {
+    height: 48px;
+    position: relative;
+}
+
+.email input[type="submit"] {
+    width: 127px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.pseudo-file {
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    width: 328px;
+}
+
+.file-wrapper {
+    display: inline-block;
+    top: -32px;
+    right: -294px;
+    overflow: hidden;
+    position: relative;
+    width: 210px;
+    height: 19px;
+}
+
+.file-input {
+    position: absolute;
+    top: 0;
+    right: 187px;
+    height: 19px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.input-file-text {
+    background: url(../img/sprites.png) no-repeat -8px -351px;
+    background-color: #f4f4f4;
+    width: 328px;
+}
+
+form .email-field {
+    width: 328px;
+    padding: 4px 3px 0 3px;
+    margin-bottom: 26px;
+    background-color: #f4f4f4;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: none;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+form .email-input {
+    width: 188px;
+    height: 37px;
+    font: 14px GothamLight, sans-serif;
+    color: white;
+    background-color: #404a58;
+    padding: 12px 20px 12px 12px;
+    box-sizing: border-box;
+    border: none;
+    margin-bottom: 3px;
+}
+
+.add-email {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../img/sprites.png) no-repeat -288px -135px;
+    position: absolute;
+    top: 14px;
+    right: 11px;
+}
+
+.add-email:hover {
+    background: url(../img/sprites.png) no-repeat -324px -135px;
+}
+
+.email-delete {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: url(../img/sprites.png) no-repeat -293px -193px;
+    position: absolute;
+    top: 16px;
+    right: 8px;
+}
+
+.email-delete:hover {
+    background: url(../img/sprites.png) no-repeat -329px -193px;
+}
+
+.email-item {
+    position: relative;
+    width: 188px;
+}

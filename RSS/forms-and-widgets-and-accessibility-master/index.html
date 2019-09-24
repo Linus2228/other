@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link type="text/css" rel="stylesheet" href="style/style.css"/>
+	<title>Accessibility</title>
+</head>
+<body>
+<!-- Calendar -->
+    <a href="#booking-form" id="calendar" title="skip to booking-form">Skip the widget</a>
+    <section class="calendar widget" tabindex="0">
+        <header class="calendar-header" role="banner">
+            <div class="calendar-date">
+                <a href="#" title="previous date" class="calendar-date-previous">
+                    <i class="arrow-prev"></i>
+                </a>
+                <h4>
+                    <span id="calendar-month">May</span>
+                    <span id="calendar-year">2014</span>
+                </h4>
+                <a href="#" title="next date" class="calendar-date-next">
+                    <i class="arrow-next"></i></a>
+            </div>
+        </header>
+        <table class="calendar-main">
+            <thead>
+                <tr>
+                    <th tabindex="0">Sun</th>
+                    <th tabindex="0">Mon</th>
+                    <th tabindex="0">Tue</th>
+                    <th tabindex="0">Wed</th>
+                    <th tabindex="0">Thu</th>
+                    <th tabindex="0">Fri</th>
+                    <th tabindex="0">Sat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="off"><a href="#" title="calendar's day">29</a></td>
+                    <td class="off"><a href="#" title="calendar's day">30</a></td>
+                    <td><a href="#" title="calendar's day">1</a></td>
+                    <td><a href="#" title="calendar's day">2</a></td>
+                    <td class="current-date"><a href="#" title="current date">3</a></td>
+                    <td><a href="#" title="calendar's day">4</a></td>
+                    <td><a href="#" title="calendar's day">5</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" title="calendar's day">6</a></td>
+                    <td class="holiday"><a href="#" title="holiday">7</a></td>
+                    <td><a href="#" title="calendar's day">8</a></td>
+                    <td><a href="#" title="calendar's day">9</a></td>
+                    <td><a href="#" title="calendar's day">10</a></td>
+                    <td><a href="#" title="calendar's day">11</a></td>
+                    <td><a href="#" title="calendar's day">12</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" title="calendar's day">13</a></td>
+                    <td><a href="#" title="calendar's day">14</a></td>
+                    <td><a href="#" title="calendar's day">15</a></td>
+                    <td><a href="#" title="calendar's day">16</a></td>
+                    <td><a href="#" title="calendar's day">17</a></td>
+                    <td><a href="#" title="calendar's day">18</a></td>
+                    <td><a href="#" title="calendar's day">19</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" title="calendar's day">20</a></td>
+                    <td><a href="#" title="calendar's day">21</a></td>
+                    <td><a href="#" title="calendar's day">22</a></td>
+                    <td class="holiday"><a href="#" title="holiday">23</a></td>
+                    <td><a href="#" title="calendar's day">24</a></td>
+                    <td><a href="#" title="calendar's day">25</a></td>
+                    <td><a href="#" title="calendar's day">26</a></td>
+                </tr>
+                <tr>
+                    <td><a href="#" title="calendar's day">27</a></td>
+                    <td><a href="#" title="calendar's day">28</a></td>
+                    <td><a href="#" title="calendar's day">29</a></td>
+                    <td><a href="#" title="calendar's day">30</a></td>
+                    <td class="off"><a href="#" title="calendar's day">1</a></td>
+                    <td class="off"><a href="#" title="calendar's day">2</a></td>
+                    <td class="off"><a href="#" title="calendar's day">3</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="calendar-new-event">
+            <input type="button" value="add event" class="calendar-add-event common-button">
+        </div>
+    </section>
+<!-- Booking form -->
+    <a href="#article-form"  id="booking-form" title="skip to article form">Skip the widget</a>
+	<section class="booking widget" tabindex="0">
+	    <header class="hide" role="banner">
+           <h2>Booking form</h2>
+        </header>
+		<div class="booking-picture" role="banner">
+			<img src="./img/booking-img.jpg" tabindex=0 alt="The story about particular city" title="particular city" id="pic-city" 
+   aria-describedby="cityHelp"/>
+			<span class="hide" id="cityHelp">
+               The story about particular city
+           </span>
+			<div class="hotel-name">
+				<h3>
+					<a href="#" title="hotel name">Hotel Relais</a>
+				</h3>
+				<a class="location" href="#" title="location">
+					<span>Paris, France</span>
+				</a>
+			</div>
+		</div>
+		<form class="booking-form" action="#" role="search">
+			<label for="check-in">Check in</label>
+			<div class="input-container">
+				<input type="text" id="check-in" value="9 July, 2016" />
+				<button class="click-backgroundg">
+				</button>
+			</div>
+			<label for="check-out">Check out</label>
+			<div class="input-container">
+				<input type="text" id="check-out" value="16 July, 2016" />
+				<button class="click-backgroundg">
+				</button>
+			</div>
+			<div class="checkbox">
+                <input id="booking-checkbox" type="checkbox" name="check" value="booking-checkbox">
+                <label for="booking-checkbox">Flexible dates</label>
+            </div>
+            <div class="select-wrapper">
+                <label for="select1" class="select-description">Adults</label>
+                <label for="select2" class="select-description select-description2">Children</label>
+                <div class="select-outer select-outer1">
+                    <select id="select1" name="select" size="1">
+                        <option value="1">1</option>
+                        <option value="2" selected="selected">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <a href="#" class="select-button" title="select button"></a>
+                </div>
+                <div class="select-outer">
+                    <select id="select2" name="select" size="1">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                    <a href="#" class="select-button" title="select button"></a>
+                </div>
+            </div>
+			<input type="submit" value="search rooms" class="common-button search-book-button">
+		</form>
+	</section>
+<!-- Article form -->
+    <a href="#graph" id="article-form" title="skip to graph">Skip the widget</a>
+    <section class="article widget" tabindex="0" title="to get next tab do this...">
+        <header class="hide" role="banner">
+           <h2>Article form</h2>
+        </header>
+        <nav role='navigation'>
+            <ul class="article-tabs">
+                <li>
+                    <a href="#" title="tab"></a>
+                </li>
+                <li>
+                    <a href="#" title="tab"></a>
+                </li>
+                <li>
+                    <a href="#" title="tab"></a>
+                </li>
+            </ul>
+        </nav>
+        <div class="article-description">
+            <h3>My most favourite place in the world</h3>
+            <span class="reviews"><span class="reviews-sum">154</span>Reviews</span>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas a pulvinar ipsum. Aliquam sit amet iaculis dolor. Vivamus sed diam sollicitudin. </p>
+            <a href="#" title="Read more">Read more</a>
+        </div>
+        <figure>
+            <img src="img/article-img.jpg" alt="Booking image" />
+            <figcaption>
+                <a href="#" title="comments" class="comments">752</a>
+                <a href="#" title="likes" class="likes">2709</a>
+            </figcaption>
+        </figure>
+        <div class="article-photo">
+        </div>
+    </section>	
+<!-- Graph -->
+    <a href="#email-form" id="graph" title="skip to email form">Skip the widget</a>
+    <section class="graph widget" tabindex="0">
+        <header class="hide" role="banner">
+           <h2>Graph widget</h2>
+        </header>
+        <nav role='navigation'>
+            <ul class="value-list">
+                <li tabindex="0">40</li>
+                <li tabindex="0">30</li>
+                <li tabindex="0">20</li>
+                <li tabindex="0">0</li>
+            </ul>
+        </nav>
+        <nav role='navigation'>
+            <ul class="week-list">
+                <li tabindex="0">Mon</li>
+                <li tabindex="0">Tues</li>
+                <li tabindex="0">Wed</li>
+                <li tabindex="0">Thu</li>
+                <li tabindex="0">Fri</li>
+                <li tabindex="0">Sat</li>
+                <li tabindex="0">Sun</li>
+            </ul>
+        </nav>
+        <nav role='navigation'>
+            <ul class="bar-list">
+                <li tabindex="0" title="seventeen">
+                    <div class="bar-unit anim-mon" style="height: 49px">
+                        <div class="value-window">
+                            <span>17</span>
+                        </div>
+                    </div>
+                </li>
+                <li tabindex="0" title="nineteen">
+                    <div class="bar-unit anim-tues" style="height: 62px">
+                        <div class="value-window">
+                            <span>19</span>
+                        </div>
+                    </div>
+                </li>
+                <li tabindex="0" title="twenty three">
+                    <div class="bar-unit anim-wed" style="height: 119px">
+                        <div class="value-window">
+                            <span>23</span>
+                        </div>
+                    </div>
+                </li>
+                <li tabindex="0" title="thirty three">
+                    <div class="bar-unit anim-thu" style="height: 158px">
+                        <div class="value-window">
+                            <span>33</span>
+                        </div>
+                    </div>
+                </li>
+                <li tabindex="0" title="twenty four">
+                    <div class="bar-unit anim-fri" style="height: 129px">
+                        <div class="value-window">
+                            <span>24</span>
+                        </div>
+                    </div>
+                </li>
+                <li tabindex="0" title="thirty four">
+                    <div class="bar-unit anim-sat" style="height: 169px">
+                        <div class="value-window">
+                            <span>34</span>
+                        </div>
+                    </div>
+                </li>
+                <li tabindex="0" title="thirty">
+                    <div class="bar-unit anim-sun" style="height: 143px">
+                        <div class="value-window">
+                            <span>30</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </section>
+<!-- Email form -->
+    <a href="#calendar" id="email-form" title="skip to calendar">Skip the widget</a>
+    <section  class="email widget" tabindex="0">
+        <header class="hide" role="banner">
+           <h2>Email form</h2>
+        </header>
+        <form action="#" role="search">
+            <nav role='navigation'>
+                <ul class="email-field">
+                    <li>
+                        <a href="#" title="add email" class="add-email"></a>
+                    </li>
+                    <li class="email-item">
+                        <input type="text" placeholder="enter your e-mail..." value="rick.james@mail.com" class="email-input">
+                        <a href="#" title="delete email" class="email-delete"></a>
+                    </li>
+                    <li class="email-item hide">
+                        <input type="text" placeholder="enter your e-mail..." value="rick.james@mail.com" class="email-input">
+                        <a href="#" title="delete email" class="email-delete"></a>
+                    </li>
+                    <li class="email-item hide">
+                        <input type="text" placeholder="enter your e-mail..." value="" class="email-input">
+                    </li>
+                </ul>
+            </nav>
+            <nav role='navigation'>
+                <ul>
+                    <li>
+                        <span class="pseudo-file">
+                            <input class="input-file-text general-input" placeholder="Subject" type="text"/>
+                            <span class="file-wrapper">
+                                <input class="file-input" type="file"/>
+                            </span>
+                        </span>
+                    </li>
+                    <li>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" class="general-input"></textarea>
+                    </li>
+                </ul>
+            </nav>
+            <div class="email-btn-wrapper">
+                <input type="submit" class="common-button" value="send">
+            </div>
+        </form>
+    </section>
+</body>
+</html>
