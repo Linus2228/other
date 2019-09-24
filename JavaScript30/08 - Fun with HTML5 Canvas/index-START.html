@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>HTML5 Canvas</title>
+</head>
+
+<body>
+  <canvas id="draw" width="800" height="800"></canvas>
+  <script>
+    let isDrawing = false;
+    let hue = 0;
+    const canvas = document.getElementById("draw");
+    const ctx = canvas.getContext("2d");
+    canvas.addEventListener('mousemove', drawCircle);
+    canvas.addEventListener('mousedown', () => isDrawing = true);
+    canvas.addEventListener('mouseup', () => isDrawing = false);
+    canvas.addEventListener('mouseout', () => isDrawing = false);
+
+
+
+    function drawCircle(event) {
+      if (!isDrawing) return;
+
+      const x = event.pageX;
+      const y = event.pageY;
+
+      hue++;
+      if (hue >= 360) {
+        hue = 0;
+      }
+
+      ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+      ctx.beginPath();
+      ctx.arc(x, y, 25, 0, 2 * Math.PI)
+      ctx.fill();
+    }
+  </script>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+    }
+  </style>
+
+</body>
+
+</html>

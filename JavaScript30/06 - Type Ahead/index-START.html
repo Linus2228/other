@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Type Ahead 👀</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or State">
+    <ul class="suggestions">
+      <li>Filter for a city</li>
+      <li>or a state</li>
+    </ul>
+  </form>
+  <script>
+    const endpoint = 'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+    let cities = [];
+    fetch(endpoint)
+      .then(response => response.json())
+      .then(data => { cities = data })
+      .then(() => { console.log(cities) });
+
+    const inputSearch = document.getElementsByClassName('search')[0];
+    inputSearch.oninput = hangleSearch;
+
+    function hangleSearch(event) {
+      const { value } = event.target;
+      const ul = document.getElementsByClassName("suggestions")[0];
+      ul.innerHTML = '';
+      const filteredCities = cities.filter(item => item.city.toLowerCase().includes(value.toLowerCase()) || item.state.toLowerCase().includes(value.toLowerCase()));
+      filteredCities.forEach(item => {
+        var li = document.createElement('li');
+        let city = item.city.replace(value, `<span class="hl">${value}</span>`)
+        let state = item.state.replace(value, `<span class="hl">${value}</span>`)
+        li.innerHTML = `${city}, ${state}`;
+        ul.appendChild(li);
+      })
+    }
+
+  </script>
+</body>
+
+</html>
