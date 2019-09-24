@@ -1,0 +1,19 @@
+{
+  "name": "linus-p",
+  "version": "1.0.4",
+  "description": "checks if passed value is true",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Linus2228/linus-p.git"
+  },
+  "author": "Dzmitry Kudla",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Linus2228/linus-p/issues"
+  },
+  "homepage": "https://github.com/Linus2228/linus-p#readme"
+}
