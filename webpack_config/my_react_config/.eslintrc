@@ -1,0 +1,11 @@
+{
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
+  "rules": {
+    "max-len": [1, 120, 2, { "ignoreComments": true }],
+    "quotes": ["error", "single"],
+    "linebreak-style": ["error", "windows"],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "semi": ["error", "never"]
+  }
+}
